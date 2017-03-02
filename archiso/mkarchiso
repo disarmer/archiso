@@ -18,7 +18,7 @@ work_dir="work"
 out_dir="out"
 sfs_mode="sfs"
 sfs_comp="xz"
-sfs_opts="-noappend -no-progress -b 1024k -no-xattrs -Xbcj x86 -Xdict-size 100%"
+sfs_opts="-noappend -no-progress -b 1024k -no-xattrs"
 gpg_key=
 
 # Show an INFO message
@@ -390,6 +390,8 @@ while getopts 'p:r:C:L:P:A:D:w:o:s:c:g:vh' arg; do
             ;;
     esac
 done
+
+[ "$sfs_comp" = xz ] && sfs_opts+=" -Xbcj x86 -Xdict-size 100%"
 
 shift $((OPTIND - 1))
 
