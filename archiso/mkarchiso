@@ -96,6 +96,8 @@ _usage ()
     echo "                     Default: ${sfs_mode}"
     echo "    -c <comp_type>   Set SquashFS compression type (gzip, lzma, lzo, xz)"
     echo "                     Default: '${sfs_comp}'"
+    echo "    -O <comp_opts>   Set SquashFS additional arguments"
+    echo "                     Default: '${sfs_opts}'"
     echo "    -v               Enable verbose output"
     echo "    -h               This message"
     echo " commands:"
